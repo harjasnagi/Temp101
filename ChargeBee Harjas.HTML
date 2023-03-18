@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.columns {
+  float: left;
+  width: 33.3%;
+  padding: 8px;
+}
+
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+}
+
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+}
+</style>
+
+<script src = "https://js.chargebee.com/v2/chargebee.js"  data-cb-site = "solutions-int-test" > </script>
+
+</head>
+<body>
+
+<h2 style="text-align:center">Harjas Internet Services</h2>
+<p style="text-align:center">Integration Ft. Chargebee</p>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header">PLAN 1</li>
+    <li class="grey">$ 100.00 / month</li>
+    <li>200 GB</li>
+    <li>Post 200 GB, reduced speed of 2Mbps</li>
+    <li class="grey"><a class="button" href="javascript:void(0)" data-cb-type="checkout" data-cb-plan-id="harjas_net_p1">Choose</a></li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header" style="background-color:#4CAF50">PLAN 2</li>
+    <li class="grey">$ 200 / month</li>
+    <li>500 GB</li>
+    <li>$1 per additional GB</li>
+    <li class="grey"><a class="button" href="javascript:void(0)" data-cb-type="checkout" data-cb-plan-id="harjas_net_p2" data-cb-plan-quantity="1" >Choose</a></li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header">PLAN 3</li>
+    <li class="grey">Custom</li>
+    <li class="grey"><a href="javascript:void(0)" data-cb-type="checkout" data-cb-plan-id="harjas_net_p3" class="button">Choose</a></li>
+  </ul>
+</div>
+
+</body>
+</html>
